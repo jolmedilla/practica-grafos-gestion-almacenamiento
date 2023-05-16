@@ -6,11 +6,11 @@
 
 He elegido desplegar el sistema como un contenedor docker en mi máquina local y conectarme a ella mediante el neo4j 
 browser que viene con el mismo, accesible por HTTP en el puerto 7474 con un navegador web. Desde dicho browser he pegado el contenido de fichero
-grafos.txt y lo he ejecutado como se muestra en la imagen a continuación.
+`grafo.txt` y lo he ejecutado como se muestra en la imagen a continuación.
 
 ![Carga de grafos desde neo4j browsertext](carga-productos-clientes.png "Carga de grafos desde neo4j browser")
 
-Como resultado de la carga se puede observar a continuación el grafo resultante mostrado en neo4j browser-
+Como resultado de la carga se puede observar a continuación el grafo resultante mostrado en neo4j browser:
 
 ![Grafo de productos y clientes](grafo-productos-clientes.png "Grafo de productos y clientes")
 
