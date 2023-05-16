@@ -20,7 +20,7 @@ MATCH path=(c:Cliente)-[:APOYA*]->(c:Cliente) RETURN nodes(path)
 //Opción 1: Utilizando la cláusula MERGE para lograr unicidad tanto en nodos como en la relación
 MERGE (d:Cliente{nombre:"Demetrio"}) MERGE (g:Cliente {nombre:"Genara"}) MERGE (d)-[:APOYA]->(g) RETURN d,g
 
-//Opción 2: Creanto primero una restricción de unicidad en los nodos y la cláusula MERGE para la relación
-CREATE CONSTRAINT FOR (c:Cliente) REQUIRE c.nombre IS UNIQUE
+//Opción 2: Creando primero una restricción de unicidad en los nodos y la cláusula MERGE para la relación
+//CREATE CONSTRAINT FOR (c:Cliente) REQUIRE c.nombre IS UNIQUE;
 
-MERGE (d:Cliente{nombre:"Demetrio"})-[:APOYA]->(g:Cliente{nombre:"Genara"}) RETURN d,g
+//MERGE (d:Cliente{nombre:"Demetrio"})-[:APOYA]->(g:Cliente{nombre:"Genara"}) RETURN d,g

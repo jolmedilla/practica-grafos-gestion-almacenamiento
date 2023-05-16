@@ -1,4 +1,5 @@
-
+// EJERCICIO 3
+// Líneas que pasan por Sol
 MATCH (l:Linea), (:Estacion {nombre:'Sol'})-[c:CONNECTS]-() WHERE c.ruta IN l.rutas RETURN distinct(l.id) AS `Lineas que pasan por Sol`
 
 // Búsqueda de camino más corto entre Quevedo y Legazpi por número de tramos
