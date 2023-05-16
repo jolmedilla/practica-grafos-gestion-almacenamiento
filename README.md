@@ -243,3 +243,26 @@ El resultado, como ya vimos en el apartado anterior es de 24 minutos:
 
 ![Duración recorrido más corto](duracion-recorrido-mas-corto.png "Duración recorrido más corto")
 
+### 4. Conclusiones finales
+
+Este trabajo me ha parecido muy interesante porque me ha permitido familiarizarme de modo práctico con las bases de datos
+de grafos que hace tiempo que me interesan de manera profesional. En el pasado tuve que implementar un producto de gestión 
+de flotas de autobuses urbanos y mi equipo y yo diseñamos, como parte del mismo un micro-servicio que contenía la topología
+de la red y lo hicimos haciendo uso de una base de datos relacional geo-referenciada. Ni que decir tiene que fue muy complicado
+y que pronto nos dimos cuenta de sus limitaciones para el problema al que nos enfrentábamos. Tiempo después, leyendo en la literatura, concretamente
+el "Designing Data Intensive Applications" de Kleppman me di cuenta de que una base de datos de grafos hubiera sido la solución
+idónea.
+
+Es por lo anterior que para este trabajo he elegido como ejemplo una red de transporte urbano, aunque no fuera de autobuses, ya que una red
+de autobuses tiene otras complicaciones, principalmente un callejero, que hubiera hecho el ejemplo demasiado complejo para este
+trabajo. En cualquier caso me ha servido para probar lo suficiente como para ver la utilidad de estas bases de datos en situaciones
+en las que hay relaciones circulares, búsquedas de caminos, etc.
+
+En cuanto a los puntos fuertes y débiles he de decir que no he tenido tiempo para mejorar las dos últimas consultas para hacerlas
+más óptimas, los tiempos de respuesta son muy elevados y estoy seguro de que hay una solución mejor ya que esta base de datos está
+especialmente diseñada para este tipo de búsquedas con costes asociados a los arcos, seguramente existen funciones en la librería que
+optimizan este tipo de búsqueda.
+
+En el futuro me gustaría estudiar las posibilidades que hay dentro de neo4j de añadir geo-referencias en los nodos para poder
+realizar búsquedas de caminos por adyacencias que era una de los problemas con que nos enfrentamos en la situación que comenté
+anteriormente. Estoy seguro de que esto es posible sino en neo4j en alguna implementación de bases de datos de grafos.
